@@ -1,6 +1,6 @@
 const puppeteer = require('puppeteer');
 const config = require('../config/Config.json');
-const {getText, click, clickWait, type, isVisible, canLogin, useFeature, savePage, prepare, eventer} = require('./helpers.js');
+const {getText, click, clickWait, type, isVisible, canLogin, useFeature, savePage, prepare, eventer, delay} = require('./helpers.js');
 const {green, yellow, red, blue, error} = require('./printer.js');
 const chalk = require('chalk');
 const {insertWord, getWord, saveWords} = require('./words.js');
@@ -89,15 +89,14 @@ async function login(page) {
 
 async function startSession(page) {
     blue('[START] Starting...');
-    await click(page, 'a.btn-start-session');
+    await clickWait(page, 'a.btn-start-session');
 
-    if (await isVisible(page, '#continue_session_button')) {
-        await clickWait(page, '#continue_session_button > div.btn-start-session');
+    if (await !isVisible(page, '#continue_session_page')) {
         green('[START] Continue!');
+        await clickWait(page, '#continue_session_page > div:nth-child(2) > div');
     } else {
-        await clickWait(page, 'a.btn-start-session');
-        await clickWait(page, 'div.btn-start-session');
         green('[START] Start!');
+        await clickWait(page, 'div.btn-start-session');
     }
 }
 
@@ -118,7 +117,7 @@ async function answerQuestion(page) {
     const englishes = translation?.map?.(obj => obj.english) ?? [];
     const english = englishes.find(word => !lastTyped.get(word)) ?? uniqueRandomArray(englishes)();
 
-    if (await isVisible(page, '#new_word_form')) {
+    if (await !isVisible(page, '#new_word_form')) {
         return newWord(page);
     } else {
         if (english) {
@@ -134,7 +133,7 @@ async function answerQuestion(page) {
             red(`[ANSWER ${i}] Not found translation for: \`${chalk.white(polish)}\``);
         }
 
-        await clickWait(page, '#check', config.delays.check_min, config.delays.check_max);
+        await clickWait(page, '#check');
 
         const valid_english = (await getText(page, '#word')).trim();
         blue(`[ANSWER ${i}] Valid translation for: \`${chalk.white(polish)}\` is: \`${chalk.cyan(valid_english)}\``);
@@ -158,7 +157,7 @@ async function newWord(page) {
         //TODO
     } else {
         await savePage(page, `${i}_feature_0`);
-        await clickWait(page, '#dont_know_new', config.delays.check_min, config.delays.check_max);
+        await clickWait(page, '#dont_know_new');
         await savePage(page, `${i}_feature_1`);
         blue(`[ANSWER ${i}] Next word!`);
         await clickWait(page, '#skip > #next_word', config.delays.next_word_min, config.delays.next_word_max);
@@ -168,7 +167,7 @@ async function newWord(page) {
 async function handleStop(page) {
     if (!page) return;
     blue('[STOP] Confirming...');
-    await click(page, '#return_mainpage');
+    //await click(page, '#return_mainpage');
 
     if (!useFeature()) {
         blue('[STOP] Saving words...');
@@ -176,7 +175,7 @@ async function handleStop(page) {
     }
 
     blue('[STOP] Closing...');
-    await page.browser().close();
+    //await page.browser().close();
 
     green('Thanks for using InstaLing Bot by PanSzelescik');
     green('https://github.com/PanSzelescik/instaling-bot');

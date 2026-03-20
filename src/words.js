@@ -70,7 +70,7 @@ async function insertWord(polish, english, sentence) {
 }
 
 async function saveWords() {
-    return writeFile('../config/SavedWords.json', JSON.stringify(words, null, 4), {encoding: 'utf8'})
+    return writeFile('config/SavedWords.json', JSON.stringify(words, null, 4), {encoding: 'utf8'})
 }
 
 module.exports = {

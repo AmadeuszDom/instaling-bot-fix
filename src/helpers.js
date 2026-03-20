@@ -1,7 +1,7 @@
 const config = require('../config/Config.json');
 const fs = require('fs/promises');
 const {EventEmitter} = require('events');
-const {interval, sendAndClear, blue} = require('./printer.js');
+const {interval, sendAndClear, blue, yellow} = require('./printer.js');
 
 const eventer = new EventEmitter();
 
@@ -71,11 +71,29 @@ async function click(page, selector) {
     ]);
 }
 */
+
 async function clickWait(page, selector, wait_min = config.delays.click_min, wait_max = config.delays.click_max) {
+    // Najpierw czekamy, aż element będzie widoczny
+    //await checkVisibility(page, selector, config.delays.selector);
+
+    // Klikamy i równolegle czekamy na nawigację (jeśli nastąpi)
+    await delay(getRandomInt(wait_min, wait_max));
+    await Promise.all([
+        page.click(selector),
+        page.waitForNavigation({ 
+            waitUntil: 'networkidle0', 
+            timeout: getRandomInt(wait_min, wait_max) 
+        }).catch(() => {})   // ← bardzo ważne: ignorujemy timeout nawigacji
+    ]);
+
+    // Opcjonalnie – dodatkowy mały losowy delay po nawigacji (jeśli chcesz zachować stary charakter)
+}
+
+/*async function clickWait(page, selector, wait_min = config.delays.click_min, wait_max = config.delays.click_max) {
     await checkVisibility(page, selector, config.delays.selector);
     await page.click(selector);
     return delay(getRandomInt(wait_min, wait_max));
-}
+}*/
 
 async function type(page, selector, text, delay) {
     return page.type(selector, text, {delay: delay ?? getRandomInt(config.delays.type_min, config.delays.type_max)});
@@ -100,7 +118,7 @@ function getRandomInt(min, max) {
 }
 
 async function checkVisibility(page, selector, delay = 1000) {
-    return page.waitForSelector(selector, {visible: true, timeout: delay});
+    return page.waitForSelector(selector, {hidden: false, timeout: delay});
 }
 
 async function isVisible(page, selector, delay) {
