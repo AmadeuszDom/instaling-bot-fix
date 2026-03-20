@@ -7,7 +7,7 @@ Wymaga Node.js 14+ (Powinien działać bez problemu na 14, 15 i 16)
 1. Pobierz i zainstaluj Node.js (14+) https://nodejs.org/en/
 2. Sklonuj repozytorium:
 ```
-git clone https://github.com/PanSzelescik/instaling-bot.git
+git clone https://github.com/AmadeuszDom/instaling-bot-fix
 ```
 3. Wpisz komendę:
 ```
@@ -50,4 +50,3 @@ npm run start
 - `open_devtools` - pozwala na otwarcie narzędzi deweloperskich razem ze startem bota (uwaga! `show_browser` jest wtedy traktowany jako `true`)
 - `mute_audio` - pozwala na wyciszenie dźwięku z przeglądarki
 - `debug` - umożliwia wyświetlanie dodatkowych logów z przeglądarki (nie są one wysyłane przez webhook!)
-- `webhook` - możesz tutaj wpisać adres URL [webhooka Discorda](https://support.discord.com/hc/en-us/articles/228383668-Intro-to-Webhooks), wtedy logi są wysyłane również przez tego webhooka
