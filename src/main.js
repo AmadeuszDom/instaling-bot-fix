@@ -92,7 +92,7 @@ async function startSession(page) {
     await click(page, 'a.btn-start-session');
 
     if (await isVisible(page, '#continue_session_button')) {
-        await clickWait(page, '#continue_session_button');
+        await clickWait(page, '#continue_session_button > div.btn-start-session');
         green('[START] Continue!');
     } else {
         await clickWait(page, 'a.btn-start-session');
