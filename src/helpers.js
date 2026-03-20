@@ -1,7 +1,7 @@
 const config = require('../config/Config.json');
 const fs = require('fs/promises');
 const {EventEmitter} = require('events');
-const {interval, sendAndClear} = require('./printer.js');
+const {interval, sendAndClear, blue} = require('./printer.js');
 
 const eventer = new EventEmitter();
 
@@ -16,10 +16,15 @@ eventer.on('stopBot', async code => {
 });
 
 async function prepare() {
-    await Promise.all([
-        fs.rmdir('pages', {recursive: true}),
-        fs.rmdir('screenshots', {recursive: true})
-    ]);
+    try {
+        await Promise.all([
+            fs.rm('pages', {recursive: true}),
+            fs.rm('screenshots', {recursive: true})
+        ]);
+        
+    } catch (error) {
+        blue(error);
+    }
     await Promise.all([
         fs.mkdir('pages', {recursive: true}),
         fs.mkdir('screenshots', {recursive: true})
@@ -32,6 +37,32 @@ async function getText(page, selector) {
     return page.evaluate(element => element.textContent, element);
 }
 
+async function click(page, selector, options = {}) {
+    const { timeout = config.delays.selector, force = false } = options;
+
+    await page.waitForSelector(selector, { visible: true, timeout });
+
+    // Najpierw próbujemy normalnie
+    try {
+        await page.click(selector, { delay: 50 });
+        return;
+    } catch (e) {
+        yellow(`Normalny click(${selector}) nie zadziałał → próbuję force`);
+    }
+
+    // Force click przez evaluate
+    await page.evaluate(sel => {
+        const el = document.querySelector(sel);
+        if (el) {
+            el.dispatchEvent(new MouseEvent('click', { bubbles: true }));
+            // ewentualnie: el.click();
+        }
+    }, selector);
+
+    // Można jeszcze dodać hover przed kliknięciem (czasami pomaga)
+    // await page.hover(selector);
+}
+/*
 async function click(page, selector) {
     await checkVisibility(page, selector, config.delays.selector);
     return Promise.all([
@@ -39,7 +70,7 @@ async function click(page, selector) {
         page.waitForNavigation({waitUntil: 'networkidle0'})
     ]);
 }
-
+*/
 async function clickWait(page, selector, wait_min = config.delays.click_min, wait_max = config.delays.click_max) {
     await checkVisibility(page, selector, config.delays.selector);
     await page.click(selector);

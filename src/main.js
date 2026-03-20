@@ -89,13 +89,14 @@ async function login(page) {
 
 async function startSession(page) {
     blue('[START] Starting...');
-    await click(page, '#session_button');
+    await click(page, 'a.btn-start-session');
 
     if (await isVisible(page, '#continue_session_button')) {
         await clickWait(page, '#continue_session_button');
         green('[START] Continue!');
     } else {
-        await clickWait(page, '#start_session_button');
+        await clickWait(page, 'a.btn-start-session');
+        await clickWait(page, 'div.btn-start-session');
         green('[START] Start!');
     }
 }
@@ -106,8 +107,8 @@ async function answerQuestion(page) {
     blue(`[ANSWER ${i}] Detecting word...`);
 
     const [sentence, polish] = await Promise.all([
-        getText(page, '#question > div.usage_example'),
-        getText(page, '#question > div.caption > div.translations')
+        getText(page, 'div.usage_example'),
+        getText(page, 'div.translation')
     ]);
 
     blue(`[ANSWER ${i}] Detected sentence: \`${chalk.white(sentence)}\``);
