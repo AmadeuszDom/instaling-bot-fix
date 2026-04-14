@@ -1,2 +1,612 @@
 [
+    {
+        "polish": "ogłaszać; zapowiadać; zawiadamiać",
+        "english": "announce",
+        "sentence": "Let me ________ the good news."
+    },
+    {
+        "polish": "przeprowadzić",
+        "english": "conduct",
+        "sentence": "The researchers decided to _______ an experiment to test their hypothesis."
+    },
+    {
+        "polish": "astronomia",
+        "english": "astronomy",
+        "sentence": "_________ is a knowledge about stars and planets."
+    },
+    {
+        "polish": "przełom",
+        "english": "breakthrough",
+        "sentence": "Obviously this agreement is a significant ____________ and it is to be welcomed. "
+    },
+    {
+        "polish": "prowadzić badania",
+        "english": "carry out studies",
+        "sentence": "Researchers plan to _____ out _______ on the new drug's effectiveness."
+    },
+    {
+        "polish": "uaktualnić; aktualizować",
+        "english": "update",
+        "sentence": "If you don't ______ your software, it'll stop working properly."
+    },
+    {
+        "polish": "czas spędzony online/w sieci",
+        "english": "time spent online",
+        "sentence": "Excessive time _____ ______ can affect mental health."
+    },
+    {
+        "polish": "szybkie połączenie/łącze",
+        "english": "high-speed connection",
+        "sentence": "How do I establish a __________ __________ between my computer and my phone?"
+    },
+    {
+        "polish": "wątek dyskusji",
+        "english": "discussion thread",
+        "sentence": "The __________ ______ quickly filled with new ideas and questions."
+    },
+    {
+        "polish": "zalogować się; wpisać na listę",
+        "english": "sign in",
+        "sentence": "You can change your password after you've ______ __."
+    },
+    {
+        "polish": "zakupy w internecie",
+        "english": "online shopping",
+        "sentence": "I like ______ ________, bacause I don't have to go out."
+    },
+    {
+        "polish": "utrzymywać kontakt z kimś",
+        "english": "keep in touch with somebody",
+        "sentence": "How do you keep __ _____ with your friends?"
+    },
+    {
+        "polish": "zawieszać sę; przerywać się (np. o połączeniu internetowym)",
+        "english": "go down",
+        "sentence": "The connection is about to __ ____. I'll catch up with you later."
+    },
+    {
+        "polish": "prośba; żądanie",
+        "english": "request",
+        "sentence": "Timothy expressed a _______ that we postpone the meeting."
+    },
+    {
+        "polish": "powiadomienie; zawiadomienie",
+        "english": "notification",
+        "sentence": "You will be sent a written ____________."
+    },
+    {
+        "polish": "zamieścić klip wideo (np. na stronie internetowej)",
+        "english": "post a video clip",
+        "sentence": "She decided to ____ _ _____ ____ of her dance performance online."
+    },
+    {
+        "polish": "profil/konto na portalu społecznościowym",
+        "english": "social media account",
+        "sentence": "You should log into your ______ _____ _______."
+    },
+    {
+        "polish": "antybiotyk",
+        "english": "antibiotic",
+        "sentence": "The doctor told me I have to take an __________."
+    },
+    {
+        "polish": "wymyślić coś",
+        "english": "come up with something",
+        "sentence": "Let me know if you ____ __ ____ any solution."
+    },
+    {
+        "polish": "botanika",
+        "english": "botany",
+        "sentence": "______ is a very old science."
+    },
+    {
+        "polish": "założyć konto, zarejestrować się",
+        "english": "sign up",
+        "sentence": "If you want to add a comment, you have to ____ __ first."
+    },
+    {
+        "polish": "trollować",
+        "english": "troll",
+        "sentence": "He likes to _____ his friends with funny memes."
+    },
+    {
+        "polish": "emotikon, emotikona (ideogram)",
+        "english": "emoji",
+        "sentence": "She adds a smiling _____ after each sentence."
+    },
+    {
+        "polish": "zalogować się",
+        "english": "log on",
+        "sentence": "How often do you ___ __ to Facebook?"
+    },
+    {
+        "polish": "bezpłatny dostęp do wi-fi",
+        "english": "free wi-fi access",
+        "sentence": "Guests enjoyed ____ _____ ______ throughout the hotel."
+    },
+    {
+        "polish": "wylogować się",
+        "english": "log off",
+        "sentence": "Don't forget to ___ ___ before you close the browser."
+    },
+    {
+        "polish": "przesyłanie komunikatów/wiadomości",
+        "english": "messaging",
+        "sentence": "They stayed in touch through instant _________."
+    },
+    {
+        "polish": "blog",
+        "english": "blog",
+        "sentence": "She writes a ____ which is read by thousands of internet users."
+    },
+    {
+        "polish": "przenosić; przetransferować",
+        "english": "transfer",
+        "sentence": "This player will be ___________ to another club."
+    },
+    {
+        "polish": "Internet",
+        "english": "Internet",
+        "sentence": "Do you have the access to the ________?"
+    },
+    {
+        "polish": "załącznik",
+        "english": "attachment",
+        "sentence": "I'll send you an e-mail with an __________."
+    },
+    {
+        "polish": "telefon",
+        "english": "phone",
+        "sentence": "The _____ is ringing, can you take it?"
+    },
+    {
+        "polish": "ulepszenie; podniesienie standardu",
+        "english": "upgrade",
+        "sentence": "You want to tell me that's an _______! "
+    },
+    {
+        "polish": "klub teatralny",
+        "english": "drama club",
+        "sentence": "To overcome my shyness, I decided to join the _____ ____."
+    },
+    {
+        "polish": "koedukacyjny",
+        "english": "mixed",
+        "sentence": "Long time ago it was uncommon to be a student of a _____ school. "
+    },
+    {
+        "polish": "zajęcia dodatkowe",
+        "english": "extracurricular activities",
+        "sentence": "This year the school has no budget for _______________ __________."
+    },
+    {
+        "polish": "szkoła z internatem",
+        "english": "boarding school",
+        "sentence": "He sent his boys to a ________ ______."
+    },
+    {
+        "polish": "uprawiać sport",
+        "english": "practise sport",
+        "sentence": "I think you should ________ _____ to stay healthy."
+    },
+    {
+        "polish": "prywatna szkoła ponadpodstawowa (często z internatem)",
+        "english": "public school",
+        "sentence": "In the UK, a ______ ______ is a type of fee-charging private school originally intended for boys."
+    },
+    {
+        "polish": "gimnazjum",
+        "english": "lower secondary",
+        "sentence": "I used to study a lot when I was in _____ _________."
+    },
+    {
+        "polish": "edukacja pomaturalna; wykształcenie wyższe",
+        "english": "tertiary education",
+        "sentence": "You can get ________ _________ at the university."
+    },
+    {
+        "polish": "uczyć się gry na instrumencie",
+        "english": "learn an instrument",
+        "sentence": "I'm looking for new hobbies so I decided to _____ __ __________."
+    },
+    {
+        "polish": "przedszkole; żłobek",
+        "english": "nursery school",
+        "sentence": "Do they teach children English in your _______ ______?"
+    },
+    {
+        "polish": "szkoła publiczna",
+        "english": "public school (AmE)",
+        "sentence": "Their children attend the ______ ______ in their neighborhood."
+    },
+    {
+        "polish": "państwowa szkoła średnia (ogólnokształcąca)",
+        "english": "comprehensive school",
+        "sentence": "Janet goes to a _____________ ______. Her parents cannot afford private education."
+    },
+    {
+        "polish": "chór",
+        "english": "choir",
+        "sentence": "The _____ had a rehearsal before their performance."
+    },
+    {
+        "polish": "edukacja domowa",
+        "english": "homeschooling",
+        "sentence": "What are the disadvantages of _____________?"
+    },
+    {
+        "polish": "szkoła żeńska; szkoła męska",
+        "english": "single-sex school",
+        "sentence": "In the 19th century most children went to __________ _______."
+    },
+    {
+        "polish": "podstawa programowa",
+        "english": "core curriculum",
+        "sentence": "Minister of Education should change the ____ __________."
+    },
+    {
+        "polish": "brytyjska państwowa szkoła średnia z egzaminami wstępnymi",
+        "english": "grammar school",
+        "sentence": "You have to pass the exams to attend the _______ ______."
+    },
+    {
+        "polish": "obowiązkowy; obowiązujący; wiążący",
+        "english": "obligatory",
+        "sentence": "This term all the subjects are __________. "
+    },
+    {
+        "polish": "opinia o postępach w nauce",
+        "english": "report",
+        "sentence": "My mum got angry at me when she saw my ______."
+    },
+    {
+        "polish": "chodzić na kurs językowy",
+        "english": "do a language course",
+        "sentence": "I want to __ _ ________ ______ to develop my language skills."
+    },
+    {
+        "polish": "dzwonek telefonu",
+        "english": "ringtone",
+        "sentence": "I use my favourite song as a ________."
+    },
+    {
+        "polish": "grupa na czacie",
+        "english": "chat group",
+        "sentence": "She created a ____ _____ for the team project."
+    },
+    {
+        "polish": "zdalny",
+        "english": "remote",
+        "sentence": "______ work has become more common since the pandemic."
+    },
+    {
+        "polish": "rozłączać",
+        "english": "disconnect",
+        "sentence": "First, you have to __________ the power source from the computer."
+    },
+    {
+        "polish": "wiadomość",
+        "english": "message",
+        "sentence": "I'll just send her a _______."
+    },
+    {
+        "polish": "chodzić na wagary",
+        "english": "play truant",
+        "sentence": "If you ever ____ ______, your mum will be angry."
+    },
+    {
+        "polish": "organizować imprezy charytatywne",
+        "english": "organize charity events",
+        "sentence": "Our head teacher often _________ _______ ______."
+    },
+    {
+        "polish": "grać w zespole",
+        "english": "play in a band",
+        "sentence": "She plays the guitar and she wants to ____ in a ____."
+    },
+    {
+        "polish": "szkoła wyższa",
+        "english": "college",
+        "sentence": "He's going to a very expensive _______ in the USA."
+    },
+    {
+        "polish": "korepetytor",
+        "english": "private tutor",
+        "sentence": "I need a _______ _____ to help me with my Portuguese."
+    },
+    {
+        "polish": "szkoła podstawowa (USA)",
+        "english": "elementary school",
+        "sentence": "Both her children are at __________ ______."
+    },
+    {
+        "polish": "szkoła państwowa",
+        "english": "state school",
+        "sentence": "You don't pay for your education at a _____ ______."
+    },
+    {
+        "polish": "szkoła podstawowa (kl. 1-3)",
+        "english": "lower primary",
+        "sentence": "My younger brother is in _____ _______ but he has too much homework."
+    },
+    {
+        "polish": "korepetytor",
+        "english": "personal tutor",
+        "sentence": "I work as a ________ _____ to earn some extra money."
+    },
+    {
+        "polish": "koedukacyjny",
+        "english": "co-educational",
+        "sentence": "All schools in my town are ______________."
+    },
+    {
+        "polish": "spotkanie towarzyskie",
+        "english": "social event",
+        "sentence": "My father hates taking part in ______ ______."
+    },
+    {
+        "polish": "podnieść rękę",
+        "english": "put up your hand",
+        "sentence": "If you have a question you should ___ __ ____ hand."
+    },
+    {
+        "polish": "wychowawca",
+        "english": "form teacher",
+        "sentence": "Our ____ _______ seems quite nice, but I haven't met the other teachers yet."
+    },
+    {
+        "polish": "opuszczać, opuścić",
+        "english": "skip",
+        "sentence": "She's been ________ lessons all year."
+    },
+    {
+        "polish": "robić kurs żeglarski",
+        "english": "do a sailing course",
+        "sentence": "My brother loves water sports so he decided to __ _ _______ ______."
+    },
+    {
+        "polish": "rzucić szkołę; wylecieć ze szkoły",
+        "english": "drop out of school",
+        "sentence": "Do you know anybody who has _______ ___ of ______?"
+    },
+    {
+        "polish": "pracować jako wolontariusz",
+        "english": "do voluntary work",
+        "sentence": "I used to __ _________ ____ in middle school and helped elderly people with doing shopping."
+    },
+    {
+        "polish": "zostać w tyle",
+        "english": "fall behind",
+        "sentence": "Do you want to ____ ______?"
+    },
+    {
+        "polish": "lekcje baletu",
+        "english": "ballet classes",
+        "sentence": "I used to attend ______ _______ when I was in primary school."
+    },
+    {
+        "polish": "technikum",
+        "english": "technical school",
+        "sentence": "My brother is planning to go to _________ ______."
+    },
+    {
+        "polish": "nauczyć się rzemiosła",
+        "english": "learn a craft",
+        "sentence": "My grandfather thinks that everyone should _____ _ _____ at school."
+    },
+    {
+        "polish": "wagary",
+        "english": "truancy",
+        "sentence": "At our school, _______ is severely punished."
+    },
+    {
+        "polish": "osoba, która nie ukończyła szkoły",
+        "english": "dropout",
+        "sentence": "My father used to say I'd become a school _______ because I didn't work hard enough."
+    },
+    {
+        "polish": "oddać",
+        "english": "hand in",
+        "sentence": "I have to ____ __ my essay today."
+    },
+    {
+        "polish": "zapisać się na zajęcia",
+        "english": "sign up for courses",
+        "sentence": "Pam wants to ____ __ ___ cooking _______."
+    },
+    {
+        "polish": "dyrektor (szkoły)",
+        "english": "head teacher",
+        "sentence": "Our ____ _______ is really angry after what we've done."
+    },
+    {
+        "polish": "nieobowiązkowy; opcjonalny; dobrowolny",
+        "english": "optional",
+        "sentence": "Attendance is ________. You don't have to be here."
+    },
+    {
+        "polish": "wysyłanie SMS-ów; pisanie wiadomości tekstowych",
+        "english": "texting",
+        "sentence": "_______ is a common form of communication among young people."
+    },
+    {
+        "polish": "lista kontaktów",
+        "english": "contacts list",
+        "sentence": "I couldn't call her, because I didn't have her on my ________ ____."
+    },
+    {
+        "polish": "wiadomość tekstowa; sms",
+        "english": "text message",
+        "sentence": "Will you send me a ____ _______ with your address?"
+    },
+    {
+        "polish": "przeglądać (strony)",
+        "english": "browse",
+        "sentence": "I spend too much time ________ the internet."
+    },
+    {
+        "polish": "telefon komórkowy (British English)",
+        "english": "mobile phone",
+        "sentence": "I've lost my ______ _____, so I'm just helpless."
+    },
+    {
+        "polish": "zadzwonić do kogoś",
+        "english": "give a call",
+        "sentence": "____ me _ ____ sometimes."
+    },
+    {
+        "polish": "zestaw słuchawkowy, słuchawki z mikrofonem",
+        "english": "headset",
+        "sentence": "Lily bought me this brand new _______ for my birthday."
+    },
+    {
+        "polish": "zamykać (np. komputer, fabrykę)",
+        "english": "shut down",
+        "sentence": "____ ____ the computer and try to repair it."
+    },
+    {
+        "polish": "wydać, wypuścić na rynek",
+        "english": "release",
+        "sentence": "She has ________ many best-selling albums."
+    },
+    {
+        "polish": "dostęp",
+        "english": "access",
+        "sentence": "I have ______ to a lot of books in the school library."
+    },
+    {
+        "polish": "opublikować komentarz, zamieszczać (coś np. na mediach społecznościowych)",
+        "english": "post",
+        "sentence": "You must be logged in to ____ a comment."
+    },
+    {
+        "polish": "router",
+        "english": "router",
+        "sentence": "A ______ is a tool that provides you Internet at home."
+    },
+    {
+        "polish": "odnawiać; odświeżać",
+        "english": "renew",
+        "sentence": "I'd like to _____ my membership card."
+    },
+    {
+        "polish": "oprogramowanie",
+        "english": "software",
+        "sentence": "This ________ won't work on that operating system."
+    },
+    {
+        "polish": "głośnomówiący",
+        "english": "hands-free",
+        "sentence": "He used a __________ device while driving."
+    },
+    {
+        "polish": "ponownie uruchomić",
+        "english": "restart",
+        "sentence": "In case of software problems, _______ your computer."
+    },
+    {
+        "polish": "pobierać, ściągać",
+        "english": "download",
+        "sentence": "Since she couldn't buy the physical copy, she decided to ________ the album illegally."
+    },
+    {
+        "polish": "konfigurować",
+        "english": "set up",
+        "sentence": "I gave my computer to an IT specialist to ___ __ my operating system."
+    },
+    {
+        "polish": "odświeżać",
+        "english": "refresh",
+        "sentence": "He _________ himself with a cool shower."
+    },
+    {
+        "polish": "oprogramowanie wykrywające wirusy",
+        "english": "virus checker",
+        "sentence": "I asked my grandson to install a _____ _______ on my laptop."
+    },
+    {
+        "polish": "dyrektor szkoły",
+        "english": "principal",
+        "sentence": "Our _________ is very strict."
+    },
+    {
+        "polish": "rzucić kurs",
+        "english": "drop out of a course",
+        "sentence": "I want to ____ ___ __ _ ______ which I find boring."
+    },
+    {
+        "polish": "oszukiwanie, ściąganie",
+        "english": "cheating",
+        "sentence": "I can tell you a lot of reasons why ________ is bad."
+    },
+    {
+        "polish": "znęcanie się nad słabszym",
+        "english": "bullying",
+        "sentence": "It is not acceptable for women to be subjected to ________ on a daily basis."
+    },
+    {
+        "polish": "ściągać (na egzaminie, klasówce); oszukiwać",
+        "english": "cheat",
+        "sentence": "My teacher caught me ________ in an exam yesterday."
+    },
+    {
+        "polish": "wkuwać",
+        "english": "cram",
+        "sentence": "She is ________ for her exam."
+    },
+    {
+        "polish": "przymusowy; obowiązkowy",
+        "english": "compulsory",
+        "sentence": "Is this subject __________ at your school?"
+    },
+    {
+        "polish": "znęcać się, gnębić, prześladować",
+        "english": "bully",
+        "sentence": "A group of teenagers _______ my brother last year, but they were severely punished."
+    },
+    {
+        "polish": "cyberprzemoc",
+        "english": "cyberbullying",
+        "sentence": "Why didn't you report this action as _____________?"
+    },
+    {
+        "polish": "zasady ubioru",
+        "english": "dress code",
+        "sentence": "Is there a _____ ____ in your school? "
+    },
+    {
+        "polish": "odpisać pracę domową",
+        "english": "copy homework",
+        "sentence": "Let me ____ your English ________, please."
+    },
+    {
+        "polish": "zostać usuniętym ze szkoły",
+        "english": "be expelled",
+        "sentence": "Mike ___ ________ from school because of his notoriously bad behaviour."
+    },
+    {
+        "polish": "zostać zawieszonym",
+        "english": "be suspended",
+        "sentence": "He was _________ from duty for disobeying orders."
+    },
+    {
+        "polish": "apel szkolny",
+        "english": "assembly",
+        "sentence": "All students must attend today's ________."
+    },
+    {
+        "polish": "przeziębić się",
+        "english": "catch a cold",
+        "sentence": "Wear a warm hat unless you want to _____ _ ____."
+    },
+    {
+        "polish": "kombinować coś, knuć coś",
+        "english": "be up to something",
+        "sentence": "You always have that smile when you ___ __ __ _________."
+    },
+    {
+        "polish": "miejmy nadzieję; ufnie; z nadzieją",
+        "english": "hopefully",
+        "sentence": "The problem will _________ be solved soon."
+    }
 ]

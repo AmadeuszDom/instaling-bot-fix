@@ -40,8 +40,6 @@ async function getText(page, selector) {
 async function click(page, selector, options = {}) {
     const { timeout = config.delays.selector, force = false } = options;
 
-    await page.waitForSelector(selector, { visible: true, timeout });
-
     // Najpierw próbujemy normalnie
     try {
         await page.click(selector, { delay: 50 });
@@ -123,8 +121,8 @@ async function checkVisibility(page, selector, delay = 1000) {
 
 async function isVisible(page, selector, delay) {
     return checkVisibility(page, selector, delay)
-        .then(() => true)
-        .catch(() => false);
+        .then(() => false)
+        .catch(() => true);
 }
 
 function canLogin() {

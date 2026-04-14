@@ -1,6 +1,6 @@
 {
-    "login": "",
-    "password": "",
+    "login": "Adeusz695",
+    "password": "dabad",
     "sites": {
         "login": "https://instaling.pl/teacher.php?page=login"
     },
@@ -9,9 +9,9 @@
         "click_max": 1500,
         "type_min": 50,
         "type_max": 100,
-        "selector": 8000,
+        "selector": 3000,
         "wait_min": 1000,
-        "wait_max": 2000,
+        "wait_max": 1400,
         "check_min": 700,
         "check_max": 1200,
         "next_word_min": 300,

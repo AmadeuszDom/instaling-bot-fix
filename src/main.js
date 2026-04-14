@@ -30,13 +30,13 @@ const lastTyped = new Map();
             error(e);
             await savePage(page, 'error');
             await handleStop(page);
-            eventer.emit('stopBot', 0);
+            //eventer.emit('stopBot', 0);
         }
     } catch (err) {
         error(err);
         await savePage(page, 'error');
         await handleStop(page);
-        eventer.emit('stopBot', 1);
+        //eventer.emit('stopBot', 1);
     }
 })();
 
@@ -89,15 +89,20 @@ async function login(page) {
 
 async function startSession(page) {
     blue('[START] Starting...');
+    try {
+        await clickWait(page, '#streak-button-close');
+    } catch (e) {
+        yellow("Nie bylo informacji o streak\'u");
+    }
     await clickWait(page, 'a.btn-start-session');
 
-    if (await !isVisible(page, '#continue_session_page')) {
-        green('[START] Continue!');
+    try {
         await clickWait(page, '#continue_session_page > div:nth-child(2) > div');
-    } else {
-        green('[START] Start!');
+
+    } catch (error) {
         await clickWait(page, 'div.btn-start-session');
     }
+
 }
 
 async function answerQuestion(page) {
@@ -117,7 +122,7 @@ async function answerQuestion(page) {
     const englishes = translation?.map?.(obj => obj.english) ?? [];
     const english = englishes.find(word => !lastTyped.get(word)) ?? uniqueRandomArray(englishes)();
 
-    if (await !isVisible(page, '#new_word_form')) {
+    if (!isVisible(page, '#new_word_form')) {
         return newWord(page);
     } else {
         if (english) {
@@ -147,7 +152,7 @@ async function answerQuestion(page) {
     }
 
     blue(`[ANSWER ${i}] Next word!`);
-    await clickWait(page, '#next_word', config.delays.next_word_min, config.delays.next_word_max);
+    await clickWait(page, '#next_word');
 }
 
 async function newWord(page) {
@@ -160,14 +165,14 @@ async function newWord(page) {
         await clickWait(page, '#dont_know_new');
         await savePage(page, `${i}_feature_1`);
         blue(`[ANSWER ${i}] Next word!`);
-        await clickWait(page, '#skip > #next_word', config.delays.next_word_min, config.delays.next_word_max);
+        await clickWait(page, '#skip > #next_word');
     }
 }
 
 async function handleStop(page) {
     if (!page) return;
     blue('[STOP] Confirming...');
-    //await click(page, '#return_mainpage');
+    await click(page, '#return_mainpage');
 
     if (!useFeature()) {
         blue('[STOP] Saving words...');
@@ -175,7 +180,7 @@ async function handleStop(page) {
     }
 
     blue('[STOP] Closing...');
-    //await page.browser().close();
+    await page.browser().close();
 
     green('Thanks for using InstaLing Bot by PanSzelescik');
     green('https://github.com/PanSzelescik/instaling-bot');
