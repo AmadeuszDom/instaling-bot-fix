@@ -1,6 +1,6 @@
 {
-    "login": "Adeusz695",
-    "password": "dabad",
+    "login": "your_login",
+    "password": "your_password",
     "sites": {
         "login": "https://instaling.pl/teacher.php?page=login"
     },
